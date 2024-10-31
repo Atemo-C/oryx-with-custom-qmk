@@ -1,4 +1,6 @@
 # Oryx with custom QMK
+### Forked from https://github.com/poulainpi/oryx-with-custom-qmk
+### For my personal use with https://configure.zsa.io/moonlander/layouts/R7Nql/latest/0
 
 This repository allows combining the convenience of [Oryx’s](https://www.zsa.io/oryx) graphical layout editing with the power of [QMK](https://qmk.fm), allowing you to customize your Oryx layout with advanced QMK features like Achordion and Repeat Key, while automating firmware builds through GitHub Actions.
 
