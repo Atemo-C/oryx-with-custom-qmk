@@ -74,20 +74,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_TRANSPARENT,      KC_TRANSPARENT, KC_TRANSPARENT
 	),
 	[2] = LAYOUT_moonlander(
-		FR_PND,              FR_EURO,        FR_DLR,      RALT(LSFT(KC_E)), FR_OVRR,    FR_HASH,        FR_CCED,
-		RALT(LSFT(FR_CCED)), FR_HASH,        FR_OVRR,     RALT(LSFT(KC_E)), FR_DLR,     FR_EURO,        FR_PND,
+		FR_PND,              FR_EURO,        FR_DLR,         RALT(LSFT(KC_E)), FR_OVRR,    FR_HASH,        FR_CCED,
+		RALT(LSFT(FR_CCED)), FR_HASH,        FR_OVRR,        RALT(LSFT(KC_E)), FR_DLR,     FR_EURO,        FR_PND,
 
-		KC_ESCAPE,           LALT(KC_C),     KC_KP_9,     KC_KP_8,          KC_KP_7,    KC_R,           FR_TILD,
-		FR_TILD,             KC_R,           KC_KP_7,     KC_KP_8,          KC_KP_9,    LALT(KC_C),     KC_ESCAPE,
+		KC_ESCAPE,           LALT(KC_C),     KC_KP_9,        KC_KP_8,          KC_KP_7,    KC_R,           FR_TILD,
+		FR_TILD,             KC_R,           KC_KP_7,        KC_KP_8,          KC_KP_9,    LALT(KC_C),     KC_ESCAPE,
 
-		TD(DANCE_11),        TD(DANCE_12),   KC_KP_6,     KC_KP_5,          KC_KP_4,    FR_LPRN,        FR_RPRN,
-		FR_LPRN,             FR_RPRN,        KC_KP_4,     KC_KP_5,          KC_KP_6,    TD(DANCE_13),   TD(DANCE_14),
+		TD(DANCE_11),        TD(DANCE_12),   KC_KP_6,        KC_KP_5,          KC_KP_4,    FR_LPRN,        FR_RPRN,
+		FR_LPRN,             FR_RPRN,        KC_KP_4,        KC_KP_5,          KC_KP_6,    TD(DANCE_13),   TD(DANCE_14),
 
-		KC_KP_MINUS,         KC_KP_PLUS,     KC_KP_3,     KC_KP_2,          KC_KP_1,    FR_PERC,
-		FR_PERC,             KC_KP_1,        KC_KP_2,     KC_KP_3,          KC_KP_PLUS, KC_KP_MINUS,
+		KC_KP_MINUS,         KC_KP_PLUS,     KC_KP_3,        KC_KP_2,          KC_KP_1,    FR_PERC,
+		FR_PERC,             KC_KP_1,        KC_KP_2,        KC_KP_3,          KC_KP_PLUS, KC_KP_MINUS,
 
-		KC_KP_EQUAL,         KC_BSPC,        KC_KP_COMMA, KC_KP_DOT,        KC_KP_0,    KC_TRANSPARENT,
-		KC_TRANSPARENT,      KC_KP_0,        KC_KP_DOT,   KC_KP_COMMA,      KC_BSPC,    KC_KP_EQUAL,
+		KC_KP_EQUAL,         KC_BSPC,        KC_KP_COMMA,    KC_KP_DOT,        KC_KP_0,    KC_TRANSPARENT,
+		KC_TRANSPARENT,      KC_KP_0,        KC_KP_DOT,      KC_KP_COMMA,      KC_BSPC,    KC_KP_EQUAL,
 
 		KC_TRANSPARENT,      KC_TRANSPARENT, KC_TRANSPARENT,
 		TO(0),               KC_TRANSPARENT, KC_TRANSPARENT
@@ -131,20 +131,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		KC_TRANSPARENT, KC_MS_BTN2,     KC_MS_BTN1
 	),
 	[5] = LAYOUT_moonlander(
-		KC_TRANSPARENT, KC_1,           KC_2,        KC_3,         KC_4,          KC_5,           KC_6,
-		KC_TRANSPARENT, KC_TRANSPARENT, LGUI(KC_I),  LGUI(KC_S),   LGUI(KC_R),    LGUI(KC_T),     KC_TRANSPARENT,
+		KC_TRANSPARENT, KC_1,           KC_2,           KC_3,         KC_4,          KC_5,           KC_6,
+		KC_TRANSPARENT, KC_TRANSPARENT, LGUI(KC_I),     LGUI(KC_S),   LGUI(KC_R),    LGUI(KC_T),     KC_TRANSPARENT,
 
-		KC_TRANSPARENT, KC_H,           FR_A,        FR_Z,         KC_E,          KC_R,           KC_T,
-		KC_Y,           KC_NO,          LGUI(KC_N),  LGUI(KC_E),   LGUI(KC_A),    LGUI(KC_O),     KC_TRANSPARENT,
+		KC_TRANSPARENT, KC_H,           FR_A,           FR_Z,         KC_E,          KC_R,           KC_T,
+		KC_Y,           KC_NO,          LGUI(KC_N),     LGUI(KC_E),   LGUI(KC_A),    LGUI(KC_O),     KC_TRANSPARENT,
 
-		KC_TRANSPARENT, KC_LEFT_SHIFT,  FR_Q,        KC_S,         KC_D,          KC_F,           KC_G,
-		KC_N,           KC_NO,          KC_F1,       KC_F2,        KC_F3,         KC_F4,          KC_TRANSPARENT,
+		KC_TRANSPARENT, KC_LEFT_SHIFT,  FR_Q,           KC_S,         KC_D,          KC_F,           KC_G,
+		KC_N,           KC_NO,          KC_F1,          KC_F2,        KC_F3,         KC_F4,          KC_TRANSPARENT,
 
-		KC_TRANSPARENT, KC_LEFT_CTRL,   FR_W,        KC_X,         KC_C,          KC_V,
-		KC_NO,          KC_F5,          KC_F6,       KC_F7,        KC_F8,         KC_TRANSPARENT,
+		KC_TRANSPARENT, KC_LEFT_CTRL,   FR_W,           KC_X,         KC_C,          KC_V,
+		KC_NO,          KC_F5,          KC_F6,          KC_F7,        KC_F8,         KC_TRANSPARENT,
 
-		KC_RIGHT_ALT,   KC_LEFT_GUI,    KC_LEFT_ALT, KC_LEFT_CTRL, KC_LEFT_SHIFT, KC_TRANSPARENT,
-		TO(0),          KC_F9,          KC_F10,      KC_F11,       KC_F12,        KC_F13,
+		KC_RIGHT_ALT,   KC_LEFT_GUI,    KC_LEFT_ALT,    KC_LEFT_CTRL, KC_LEFT_SHIFT, KC_TRANSPARENT,
+		TO(0),          KC_F9,          KC_F10,         KC_F11,       KC_F12,        KC_F13,
 
 		KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,
 		KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
@@ -328,12 +328,23 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
 		case ST_MACRO_0:
 		if (record->event.pressed) {
-			SEND_STRING(SS_TAP(X_CAPS) SS_DELAY(2) SS_TAP(X_9) SS_DELAY(2) SS_TAP(X_CAPS));
+			SEND_STRINGS(
+				SS_TAP(X_CAPS) SS_DELAY(2)
+				SS_TAP(X_9)    SS_DELAY(2)
+				SS_TAP(X_CAPS)
+			);
 		}
 		break;
 		case ST_MACRO_1:
 		if (record->event.pressed) {
-			SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_U))) SS_DELAY(2) SS_TAP(X_KP_2) SS_DELAY(2) SS_TAP(X_KP_0) SS_DELAY(2) SS_TAP(X_KP_2) SS_DELAY(2) SS_TAP(X_KP_6)	SS_DELAY(2) SS_TAP(X_SPACE));
+			SEND_STRINGS(
+				SS_LCTL(SS_LSFT(SS_TAP(X_U))) SS_DELAY(2)
+				SS_TAP(X_KP_2)                SS_DELAY(2)
+				SS_TAP(X_KP_0)                SS_DELAY(2)
+				SS_TAP(X_KP_2)                SS_DELAY(2)
+				SS_TAP(X_KP_6)                SS_DELAY(2)
+				SS_TAP(X_SPACE)
+			);
 		}
 		break;
 
