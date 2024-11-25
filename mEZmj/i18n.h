@@ -21,6 +21,7 @@
 #define US_DEG S(ALGR(KC_SCLN))
 #define US_PLUS S(KC_EQL)
 #define US_ASTR S(KC_8)
+#define US_TILD S(KC_GRV)
 #define US_MUL ALGR(KC_EQL)
 #define US_RABK S(KC_DOT)
 #define US_RPRN S(KC_0)
