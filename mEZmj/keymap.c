@@ -58,7 +58,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [1] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, RALT(KC_GRAVE), US_AMPR,        US_HASH,        US_DLR,         KC_AT,          RALT(LSFT(KC_M)),                                US_DIV,         US_PERC,        US_DEG,         US_PLUS,        US_ASTR,        KC_TILD,        KC_TRANSPARENT, 
+    KC_TRANSPARENT, RALT(KC_GRAVE), US_AMPR,        US_HASH,        US_DLR,         KC_AT,          RALT(LSFT(KC_M)),                                US_DIV,         US_PERC,        US_DEG,         US_PLUS,        US_ASTR,        RALT(US_TILD),  KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_SLASH,       KC_LBRC,        US_LCBR,        US_LPRN,        US_LABK,        US_CENT,                                                                        US_MUL,         US_RABK,        US_RPRN,        US_RCBR,        KC_RBRC,        KC_BSLS,        KC_TRANSPARENT, 
     KC_TRANSPARENT, RALT(KC_X),     ST_MACRO_0,     US_SECT,        US_UNDS,        US_PIPE,                                        KC_EQUAL,       KC_MINUS,       US_PND,         US_EURO,        ST_MACRO_1,     KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                                                                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -915,7 +915,7 @@ void dance_19_finished(tap_dance_state_t *state, void *user_data) {
     switch (dance_state[19].step) {
         case SINGLE_TAP: register_code16(US_CIRC); break;
         case SINGLE_HOLD: register_code16(LSFT(KC_QUOTE)); break;
-        case DOUBLE_TAP: register_code16(US_CIRC); register_code16(US_CIRC); break;
+        case DOUBLE_TAP: register_code16(KC_TILD); break;
         case DOUBLE_SINGLE_TAP: tap_code16(US_CIRC); register_code16(US_CIRC);
     }
 }
@@ -925,7 +925,7 @@ void dance_19_reset(tap_dance_state_t *state, void *user_data) {
     switch (dance_state[19].step) {
         case SINGLE_TAP: unregister_code16(US_CIRC); break;
         case SINGLE_HOLD: unregister_code16(LSFT(KC_QUOTE)); break;
-        case DOUBLE_TAP: unregister_code16(US_CIRC); break;
+        case DOUBLE_TAP: unregister_code16(KC_TILD); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(US_CIRC); break;
     }
     dance_state[19].step = 0;
