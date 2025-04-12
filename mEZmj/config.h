@@ -8,7 +8,7 @@
 #define RGB_MATRIX_VAL_STEP 4
 
 #define USB_SUSPEND_WAKEUP_DELAY 0
-#define SERIAL_NUMBER "mEZmj/ea944W"
+#define SERIAL_NUMBER "mEZmj/jZOV7J"
 #define LAYER_STATE_16BIT
 #define COMBO_COUNT 1
 
