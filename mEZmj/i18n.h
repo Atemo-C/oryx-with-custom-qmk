@@ -1,5 +1,4 @@
 #define US_CCED ALGR(KC_COMM)
-#define US_ACUT ALGR(KC_QUOT)
 #define US_COLN S(KC_SCLN)
 #define US_CIRC S(KC_6)
 #define US_QUES S(KC_SLSH)
@@ -28,5 +27,3 @@
 #define US_RCBR S(KC_RBRC)
 #define US_PND S(ALGR(KC_4))
 #define US_EURO ALGR(KC_5)
-#define US_THRN ALGR(KC_T)
-#define US_AE ALGR(KC_Z)
