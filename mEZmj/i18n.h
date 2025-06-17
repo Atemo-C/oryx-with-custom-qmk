@@ -1,4 +1,5 @@
 #define US_CCED ALGR(KC_COMM)
+#define US_ACUT ALGR(KC_QUOT)
 #define US_COLN S(KC_SCLN)
 #define US_CIRC S(KC_6)
 #define US_QUES S(KC_SLSH)
