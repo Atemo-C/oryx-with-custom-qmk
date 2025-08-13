@@ -26,21 +26,21 @@ enum tap_dance_codes {
   DANCE_8,
 };
 
-#define DUAL_FUNC_0 LT(8, KC_R)
-#define DUAL_FUNC_1 LT(11, KC_F2)
-#define DUAL_FUNC_2 LT(4, KC_1)
-#define DUAL_FUNC_3 LT(14, KC_E)
-#define DUAL_FUNC_4 LT(7, KC_X)
-#define DUAL_FUNC_5 LT(8, KC_F8)
-#define DUAL_FUNC_6 LT(8, KC_7)
-#define DUAL_FUNC_7 LT(7, KC_1)
-#define DUAL_FUNC_8 LT(11, KC_F4)
-#define DUAL_FUNC_9 LT(3, KC_F4)
-#define DUAL_FUNC_10 LT(12, KC_F6)
-#define DUAL_FUNC_11 LT(9, KC_F22)
-#define DUAL_FUNC_12 LT(2, KC_5)
-#define DUAL_FUNC_13 LT(15, KC_F9)
-#define DUAL_FUNC_14 LT(14, KC_F8)
+#define DUAL_FUNC_0 LT(10, KC_F9)
+#define DUAL_FUNC_1 LT(12, KC_F14)
+#define DUAL_FUNC_2 LT(11, KC_F12)
+#define DUAL_FUNC_3 LT(2, KC_U)
+#define DUAL_FUNC_4 LT(10, KC_R)
+#define DUAL_FUNC_5 LT(15, KC_T)
+#define DUAL_FUNC_6 LT(15, KC_F21)
+#define DUAL_FUNC_7 LT(5, KC_F18)
+#define DUAL_FUNC_8 LT(6, KC_F11)
+#define DUAL_FUNC_9 LT(3, KC_F16)
+#define DUAL_FUNC_10 LT(6, KC_F18)
+#define DUAL_FUNC_11 LT(4, KC_E)
+#define DUAL_FUNC_12 LT(8, KC_E)
+#define DUAL_FUNC_13 LT(2, KC_S)
+#define DUAL_FUNC_14 LT(8, KC_F8)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_moonlander(
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [3] = LAYOUT_moonlander(
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, RGB_VAD,        KC_HOME,        KC_UP,          KC_PAGE_UP,     RGB_VAI,        KC_AUDIO_MUTE,                                  KC_AUDIO_MUTE,  RGB_VAD,        KC_PAGE_UP,     KC_UP,          KC_HOME,        RGB_VAI,        KC_TRANSPARENT, 
+    KC_TRANSPARENT, RGB_VAD,        KC_HOME,        KC_UP,          KC_PAGE_UP,     RGB_VAI,        KC_AUDIO_MUTE,                                  KC_AUDIO_MUTE,  KC_BRIGHTNESS_DOWN,KC_PAGE_UP,     KC_UP,          KC_HOME,        KC_BRIGHTNESS_UP,KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_AUDIO_VOL_DOWN,KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_AUDIO_VOL_UP,TO(4),                                                                          TO(4),          KC_AUDIO_VOL_DOWN,KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_AUDIO_VOL_UP,KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_MEDIA_PREV_TRACK,KC_END,         TD(DANCE_6),    KC_PGDN,        KC_MEDIA_NEXT_TRACK,                                KC_MEDIA_PREV_TRACK,KC_PGDN,        TD(DANCE_7),    KC_END,         KC_MEDIA_NEXT_TRACK,KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, TO(0),                                                                                                          KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
@@ -152,30 +152,35 @@ bool rgb_matrix_indicators_user(void) {
   if (rawhid_state.rgb_control) {
       return false;
   }
-    if (keyboard_config.disable_layer_led) { return false; }
-  switch (biton32(layer_state)) {
-    case 0:
-      set_layer_color(0);
-      break;
-    case 1:
-      set_layer_color(1);
-      break;
-    case 2:
-      set_layer_color(2);
-      break;
-    case 3:
-      set_layer_color(3);
-      break;
-    case 4:
-      set_layer_color(4);
-      break;
-    case 5:
-      set_layer_color(5);
-      break;
-   default:
-      if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
-        rgb_matrix_set_color_all(0, 0, 0);
-      }
+  if (!keyboard_config.disable_layer_led) { 
+    switch (biton32(layer_state)) {
+      case 0:
+        set_layer_color(0);
+        break;
+      case 1:
+        set_layer_color(1);
+        break;
+      case 2:
+        set_layer_color(2);
+        break;
+      case 3:
+        set_layer_color(3);
+        break;
+      case 4:
+        set_layer_color(4);
+        break;
+      case 5:
+        set_layer_color(5);
+        break;
+     default:
+        if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
+          rgb_matrix_set_color_all(0, 0, 0);
+        }
+    }
+  } else {
+    if (rgb_matrix_get_flags() == LED_FLAG_NONE) {
+      rgb_matrix_set_color_all(0, 0, 0);
+    }
   }
 
   return true;
