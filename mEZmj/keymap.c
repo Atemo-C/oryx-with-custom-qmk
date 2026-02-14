@@ -583,12 +583,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     break;
     case ST_MACRO_0:
     if (record->event.pressed) {
-      SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_U)))SS_DELAY(100)  SS_TAP(X_2)SS_DELAY(100)  SS_TAP(X_0)SS_DELAY(100)  SS_TAP(X_2)SS_DELAY(100)  SS_TAP(X_6)  SS_DELAY(100) SS_TAP(X_ENTER));
+      SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_U)))SS_DELAY(1)  SS_TAP(X_2)SS_DELAY(1)  SS_TAP(X_0)SS_DELAY(1)  SS_TAP(X_2)SS_DELAY(1)  SS_TAP(X_6)  SS_DELAY(1) SS_TAP(X_SPACE));
     }
     break;
     case ST_MACRO_1:
     if (record->event.pressed) {
-      SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_U)))SS_DELAY(100)  SS_TAP(X_2)SS_DELAY(100)  SS_TAP(X_0)SS_DELAY(100)  SS_TAP(X_2)SS_DELAY(100)  SS_TAP(X_2));
+      SEND_STRING(SS_LCTL(SS_LSFT(SS_TAP(X_U)))SS_DELAY(1)  SS_TAP(X_2)SS_DELAY(1)  SS_TAP(X_0)SS_DELAY(1)  SS_TAP(X_2)SS_DELAY(1)  SS_TAP(X_2)  SS_DELAY(1)  SS_TAP(X_SPACE));
     }
     break;
 
